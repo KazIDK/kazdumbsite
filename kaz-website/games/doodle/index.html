@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Doodle | Kaz’s Dumb Website</title>
+
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="./game.css" />
+</head>
+<body>
+
+  <div class="bg">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+  </div>
+
+  <div class="wrapper">
+    <header class="topbar">
+      <div class="brand">
+        <span class="badge">game</span>
+        <h1>Kaz’s Dumb Website</h1>
+      </div>
+
+      <nav class="nav">
+        <a href="/">Home</a>
+        <a href="/socials/">Socials</a>
+        <a href="/games/">Games</a>
+        <a href="/friends/">Friends</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h2>Doodle Jump</h2>
+      <p>Tilt / drag / A-D. Wrap-around. Go up forever.</p>
+    </section>
+
+    <section class="gameWrap">
+      <div class="hud">
+        <div class="hudCard">
+          <div class="hudLabel">Score</div>
+          <div class="hudValue" id="score">0</div>
+        </div>
+        <div class="hudCard">
+          <div class="hudLabel">Best</div>
+          <div class="hudValue" id="best">0</div>
+        </div>
+
+        <button class="hudBtn" id="startBtn">Start</button>
+        <button class="hudBtn" id="restartBtn">Restart</button>
+        <a class="hudBtn" href="/games/">Back</a>
+      </div>
+
+      <div class="boardCard">
+        <canvas id="game"></canvas>
+
+        <div class="overlay" id="overlay">
+          <div class="overlayTitle" id="overlayTitle">DOODLE</div>
+          <div class="overlayText" id="overlayText">
+            Tilt phone or drag<br/>PC: A/D or arrows
+          </div>
+        </div>
+      </div>
+
+      <div class="hint">
+        Mobile: tilt works if allowed; drag anywhere also works.
+      </div>
+    </section>
+
+    <div class="footer">/games/doodle ✅</div>
+  </div>
+
+  <script src="/js/main.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

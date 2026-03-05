@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Runner | Kaz’s Dumb Website</title>
+
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="./game.css" />
+</head>
+<body>
+
+  <div class="bg">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+  </div>
+
+  <div class="wrapper">
+    <header class="topbar">
+      <div class="brand">
+        <span class="badge">game</span>
+        <h1>Kaz’s Dumb Website</h1>
+      </div>
+
+      <nav class="nav">
+        <a href="/">Home</a>
+        <a href="/socials/">Socials</a>
+        <a href="/games/">Games</a>
+        <a href="/friends/">Friends</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h2>Runner</h2>
+      <p>Tap/click/Space to jump. Swipe down / S to slide. Don’t get cooked.</p>
+    </section>
+
+    <section class="gameWrap">
+      <div class="hud">
+        <div class="hudCard">
+          <div class="hudLabel">Score</div>
+          <div class="hudValue" id="score">0</div>
+        </div>
+        <div class="hudCard">
+          <div class="hudLabel">Best</div>
+          <div class="hudValue" id="best">0</div>
+        </div>
+
+        <button class="hudBtn" id="startBtn">Start</button>
+        <button class="hudBtn" id="restartBtn">Restart</button>
+        <a class="hudBtn" href="/games/">Back</a>
+      </div>
+
+      <div class="boardCard">
+        <canvas id="game"></canvas>
+
+        <div class="overlay" id="overlay">
+          <div class="overlayTitle" id="overlayTitle">RUNNER</div>
+          <div class="overlayText" id="overlayText">
+            Tap / Space = Jump<br/>Swipe Down / S = Slide
+          </div>
+        </div>
+      </div>
+
+      <div class="mobileBtns">
+        <button class="mbtn" id="jumpBtn">Jump</button>
+        <button class="mbtn" id="slideBtn">Slide</button>
+      </div>
+
+      <div class="hint">Mobile: tap to jump, swipe down to slide (buttons also work).</div>
+    </section>
+
+    <div class="footer">/games/runner ✅</div>
+  </div>
+
+  <script src="/js/main.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

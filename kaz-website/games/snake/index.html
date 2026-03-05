@@ -1,0 +1,62 @@
+<section class="hero">
+  <h2>Snake</h2>
+  <p>Wrap-around map + difficulty + random events.</p>
+</section>
+
+<section class="snakeWrap">
+  <div class="hud">
+    <div class="hudCard">
+      <div class="hudLabel">Score</div>
+      <div class="hudValue" id="score">0</div>
+    </div>
+
+    <div class="hudCard">
+      <div class="hudLabel">Best</div>
+      <div class="hudValue" id="best">0</div>
+    </div>
+
+    <div class="hudCard">
+      <div class="hudLabel">Event</div>
+      <div class="hudValue" id="eventText" style="font-size:14px;">None</div>
+    </div>
+
+    <div class="hudCard hudWide">
+      <div class="hudLabel">Difficulty</div>
+      <div class="diffRow">
+        <select id="difficulty">
+          <option value="easy">Easy</option>
+          <option value="normal" selected>Normal</option>
+          <option value="hard">Hard</option>
+        </select>
+        <button class="hudBtn" id="applyDiffBtn">Apply</button>
+      </div>
+    </div>
+
+    <button class="hudBtn" id="startBtn">Start</button>
+    <button class="hudBtn" id="pauseBtn">Pause</button>
+    <button class="hudBtn" id="restartBtn">Restart</button>
+    <a class="hudBtn" href="/games/">Back</a>
+  </div>
+
+  <div class="boardCard">
+    <canvas id="game" width="360" height="360"></canvas>
+    <div class="overlay" id="overlay">
+      <div class="overlayTitle" id="overlayTitle">SNAKE</div>
+      <div class="overlayText" id="overlayText">Press Start</div>
+    </div>
+  </div>
+
+  <!-- Mobile controls -->
+  <div class="controls">
+    <button class="cbtn" id="upBtn">▲</button>
+    <div class="midRow">
+      <button class="cbtn" id="leftBtn">◀</button>
+      <button class="cbtn" id="downBtn">▼</button>
+      <button class="cbtn" id="rightBtn">▶</button>
+    </div>
+  </div>
+
+  <div class="hint">
+    PC: Arrow keys / WASD. Mobile: swipe OR buttons.
+  </div>
+</section>

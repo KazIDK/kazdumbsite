@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Typing | Kaz’s Dumb Website</title>
+
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="./game.css" />
+</head>
+<body>
+
+  <div class="bg">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+  </div>
+
+  <div class="wrapper">
+    <header class="topbar">
+      <div class="brand">
+        <span class="badge">game</span>
+        <h1>Kaz’s Dumb Website</h1>
+      </div>
+
+      <nav class="nav">
+        <a href="/">Home</a>
+        <a href="/socials/">Socials</a>
+        <a href="/games/">Games</a>
+        <a href="/friends/">Friends</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h2>Typing</h2>
+      <p>Type the text. Works on mobile. WPM + accuracy + streak.</p>
+    </section>
+
+    <section class="typingWrap">
+      <div class="hud">
+        <div class="hudCard">
+          <div class="hudLabel">Time</div>
+          <div class="hudValue" id="time">30</div>
+        </div>
+        <div class="hudCard">
+          <div class="hudLabel">WPM</div>
+          <div class="hudValue" id="wpm">0</div>
+        </div>
+        <div class="hudCard">
+          <div class="hudLabel">Accuracy</div>
+          <div class="hudValue" id="acc">100%</div>
+        </div>
+        <div class="hudCard">
+          <div class="hudLabel">Streak</div>
+          <div class="hudValue" id="streak">0</div>
+        </div>
+        <div class="hudCard">
+          <div class="hudLabel">Best</div>
+          <div class="hudValue" id="best">0</div>
+        </div>
+
+        <div class="hudRight">
+          <select id="mode" class="select">
+            <option value="15">15s</option>
+            <option value="30" selected>30s</option>
+            <option value="60">60s</option>
+          </select>
+          <button class="btn" id="newBtn">New Text</button>
+          <button class="btn" id="startBtn">Start</button>
+          <button class="btn" id="restartBtn">Restart</button>
+          <a class="btn" href="/games/">Back</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="prompt" id="prompt" aria-label="Typing prompt"></div>
+        <textarea
+          id="input"
+          class="input"
+          placeholder="Tap here and type…"
+          autocomplete="off"
+          autocapitalize="off"
+          autocorrect="off"
+          spellcheck="false"
+        ></textarea>
+
+        <div class="mini">
+          <span class="miniHint">Tip: mobile works best in landscape 👀</span>
+          <span class="miniHint" id="status">Press Start</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">/games/typing ✅</div>
+  </div>
+
+  <script src="/js/main.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>
