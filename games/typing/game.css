@@ -1,0 +1,109 @@
+.typingWrap{
+  margin-top: 14px;
+  display:grid;
+  gap:12px;
+}
+
+.hud{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  align-items:stretch;
+}
+
+.hudCard{
+  border:1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.06);
+  border-radius: 16px;
+  padding: 12px 14px;
+  min-width: 96px;
+}
+
+.hudLabel{ color: rgba(255,255,255,0.70); font-size: 12px; }
+.hudValue{ font-size: 20px; font-weight: 900; margin-top: 4px; }
+
+.hudRight{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  align-items:center;
+  margin-left:auto;
+}
+
+.select, .btn{
+  border:1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.92);
+  padding: 12px 14px;
+  border-radius: 999px;
+  cursor:pointer;
+  text-decoration:none;
+  touch-action: manipulation;
+}
+
+.btn:active{ transform: scale(0.98); }
+
+.card{
+  border:1px solid rgba(255,255,255,0.14);
+  background: rgba(0,0,0,0.18);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  overflow:hidden;
+  padding: 14px;
+  display:grid;
+  gap:12px;
+}
+
+.prompt{
+  border:1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.06);
+  border-radius: 16px;
+  padding: 14px;
+  line-height: 1.6;
+  font-size: 15px;
+  word-wrap: break-word;
+}
+
+.char{
+  padding: 0 0.5px;
+  border-radius: 6px;
+}
+
+.char.ok{
+  color: rgba(255,255,255,0.95);
+  background: rgba(255,255,255,0.10);
+}
+
+.char.bad{
+  color: rgba(255,255,255,0.95);
+  background: rgba(255,80,80,0.25);
+}
+
+.char.cur{
+  outline: 2px solid rgba(255,255,255,0.35);
+}
+
+.input{
+  width: 100%;
+  min-height: 120px;
+  resize: vertical;
+  border:1px solid rgba(255,255,255,0.12);
+  background: rgba(0,0,0,0.20);
+  border-radius: 16px;
+  padding: 14px;
+  color: rgba(255,255,255,0.92);
+  font-size: 16px;
+  line-height: 1.4;
+  outline: none;
+}
+
+.mini{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  flex-wrap:wrap;
+  color: rgba(255,255,255,0.65);
+  font-size: 12px;
+}

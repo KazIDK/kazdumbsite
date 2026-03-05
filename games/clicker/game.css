@@ -1,0 +1,200 @@
+.clickerLayout{
+  margin-top: 14px;
+  display:grid;
+  gap:12px;
+}
+
+@media (min-width: 980px){
+  .clickerLayout{
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items:start;
+  }
+}
+
+.leftCol, .rightCol{
+  display:grid;
+  gap:12px;
+}
+
+.statRow{
+  display:grid;
+  gap:10px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.statCard{
+  border:1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.06);
+  border-radius: 16px;
+  padding: 12px 14px;
+}
+.statLabel{
+  color: rgba(255,255,255,0.70);
+  font-size: 12px;
+}
+.statValue{
+  margin-top: 4px;
+  font-size: 18px;
+  font-weight: 900;
+  overflow:hidden;
+  text-overflow: ellipsis;
+}
+
+.bigClick{
+  border:1px solid rgba(255,255,255,0.16);
+  background: linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.06));
+  border-radius: 22px;
+  padding: 22px 18px;
+  box-shadow: var(--shadow);
+  cursor:pointer;
+  touch-action: manipulation;
+  text-align:center;
+  position: relative;
+  overflow:hidden;
+  user-select:none;
+}
+.bigClick:active{ transform: scale(0.985); }
+@media (hover:hover){
+  .bigClick:hover{ border-color: rgba(255,255,255,0.28); transform: translateY(-2px); }
+}
+
+.bigEmoji{ font-size: 56px; }
+.bigText{
+  font-weight: 1000;
+  letter-spacing: 0.08em;
+  margin-top: 6px;
+}
+.bigSub{
+  margin-top: 4px;
+  color: rgba(255,255,255,0.70);
+  font-size: 12px;
+}
+
+.miniControls{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+.pill{
+  border:1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.92);
+  padding: 10px 12px;
+  border-radius: 999px;
+  cursor:pointer;
+  text-decoration:none;
+  touch-action: manipulation;
+}
+.pill:active{ transform: scale(0.98); }
+
+.log{
+  border:1px solid rgba(255,255,255,0.12);
+  background: rgba(0,0,0,0.14);
+  border-radius: 16px;
+  padding: 12px;
+  color: rgba(255,255,255,0.70);
+  font-size: 12px;
+  min-height: 44px;
+}
+
+/* Tabs */
+.tabs{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+.tab{
+  flex:1;
+  min-width: 110px;
+  border:1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.92);
+  padding: 10px 12px;
+  border-radius: 999px;
+  cursor:pointer;
+  touch-action: manipulation;
+}
+.tab.active{
+  border-color: rgba(255,255,255,0.30);
+  background: rgba(255,255,255,0.10);
+}
+.tab:active{ transform: scale(0.98); }
+
+/* Reuse your panel styles but keep it open/close simple */
+.panel{
+  background: rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.14);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  overflow:hidden;
+  display:none;
+}
+.panel.open{ display:block; }
+
+.panelBody{
+  padding: 14px;
+  display:grid;
+  gap:12px;
+}
+
+/* buy cards */
+.buyItem{
+  border:1px solid rgba(255,255,255,0.12);
+  background: rgba(0,0,0,0.12);
+  border-radius: 18px;
+  padding: 14px;
+  display:flex;
+  justify-content: space-between;
+  gap:12px;
+  align-items:center;
+}
+.buyLeft{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  min-width: 0;
+}
+.buyName{
+  font-weight: 900;
+  font-size: 16px;
+}
+.buyDesc{
+  color: rgba(255,255,255,0.68);
+  font-size: 12px;
+}
+.buyMeta{
+  color: rgba(255,255,255,0.68);
+  font-size: 12px;
+}
+.buyBtn{
+  border:1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.92);
+  padding: 10px 12px;
+  border-radius: 12px;
+  cursor:pointer;
+  touch-action: manipulation;
+  white-space:nowrap;
+}
+.buyBtn:disabled{
+  opacity: 0.45;
+  cursor:not-allowed;
+}
+.buyBtn:active{ transform: scale(0.98); }
+
+/* floating +1 text */
+.floaty{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+  font-weight: 900;
+  opacity: 0.95;
+  pointer-events:none;
+  animation: floatUp 0.9s ease forwards;
+}
+@keyframes floatUp{
+  0%{ transform: translate(-50%,-50%) scale(1); opacity: 0.95; }
+  100%{ transform: translate(-50%,-110%) scale(1.05); opacity: 0; }
+}

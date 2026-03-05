@@ -1,0 +1,93 @@
+.gameWrap{
+  margin-top: 14px;
+  display:grid;
+  gap:12px;
+}
+
+.hud{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  align-items:stretch;
+}
+
+.hudCard{
+  border:1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.06);
+  border-radius: 16px;
+  padding: 12px 14px;
+  min-width: 110px;
+}
+
+.hudLabel{ color: rgba(255,255,255,0.70); font-size: 12px; }
+.hudValue{ font-size: 20px; font-weight: 900; margin-top: 4px; }
+
+.hudBtn{
+  border:1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.92);
+  padding: 12px 14px;
+  border-radius: 999px;
+  cursor:pointer;
+  text-decoration:none;
+  touch-action: manipulation;
+}
+.hudBtn:active{ transform: scale(0.98); }
+
+.boardCard{
+  position:relative;
+  border:1px solid rgba(255,255,255,0.14);
+  background: rgba(0,0,0,0.18);
+  border-radius: 18px;
+  padding: 12px;
+  overflow:hidden;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  width: fit-content;
+  max-width: 92vw;
+}
+
+#game{
+  width: min(520px, 92vw);
+  height: auto;
+  display:block;
+  border-radius: 14px;
+  border:1px solid rgba(255,255,255,0.12);
+  background: rgba(0,0,0,0.25);
+  touch-action: none; /* allow drag without scrolling */
+}
+
+.overlay{
+  position:absolute;
+  inset: 12px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  border-radius: 14px;
+  background: rgba(0,0,0,0.45);
+  opacity: 1;
+  transition: opacity .2s ease;
+  pointer-events:none;
+  text-align:center;
+}
+.overlay.hidden{ opacity:0; }
+
+.overlayTitle{
+  font-weight: 1000;
+  letter-spacing: 0.08em;
+  font-size: 22px;
+}
+.overlayText{
+  color: rgba(255,255,255,0.75);
+  font-size: 13px;
+  line-height: 1.35;
+  padding: 0 12px;
+}
+
+.hint{
+  color: rgba(255,255,255,0.65);
+  font-size: 12px;
+}

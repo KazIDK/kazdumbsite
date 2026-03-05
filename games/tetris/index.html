@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Tetris | Kaz’s Dumb Website</title>
+
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="./game.css" />
+</head>
+<body>
+
+  <div class="bg">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+  </div>
+
+  <div class="wrapper">
+    <header class="topbar">
+      <div class="brand">
+        <span class="badge">game</span>
+        <h1>Kaz’s Dumb Website</h1>
+      </div>
+
+      <nav class="nav">
+        <a href="/">Home</a>
+        <a href="/socials/">Socials</a>
+        <a href="/games/">Games</a>
+        <a href="/friends/">Friends</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h2>Tetris</h2>
+      <p>Keyboard on PC, touch controls on mobile.</p>
+    </section>
+
+    <section class="tetrisWrap">
+      <div class="hud">
+        <div class="hudCard">
+          <div class="hudLabel">Score</div>
+          <div class="hudValue" id="score">0</div>
+        </div>
+        <div class="hudCard">
+          <div class="hudLabel">Lines</div>
+          <div class="hudValue" id="lines">0</div>
+        </div>
+        <div class="hudCard">
+          <div class="hudLabel">Level</div>
+          <div class="hudValue" id="level">1</div>
+        </div>
+        <button class="hudBtn" id="startBtn">Start</button>
+        <button class="hudBtn" id="pauseBtn">Pause</button>
+        <a class="hudBtn" href="/games/">Back</a>
+      </div>
+
+      <div class="boardCard">
+        <canvas id="game" width="300" height="600"></canvas>
+        <div class="overlay" id="overlay">
+          <div class="overlayTitle" id="overlayTitle">TETRIS</div>
+          <div class="overlayText" id="overlayText">Press Start</div>
+        </div>
+      </div>
+
+      <!-- Mobile controls -->
+      <div class="controls">
+        <button class="cbtn" id="leftBtn">◀</button>
+        <button class="cbtn" id="rightBtn">▶</button>
+        <button class="cbtn" id="downBtn">▼</button>
+        <button class="cbtn" id="rotateBtn">⟳</button>
+        <button class="cbtn" id="dropBtn">⤓</button>
+      </div>
+
+      <div class="hint">
+        PC: ← → (move), ↓ (soft drop), ↑ (rotate), Space (hard drop), P (pause)
+      </div>
+    </section>
+
+    <div class="footer">/games/tetris ✅</div>
+  </div>
+
+  <script src="/js/main.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

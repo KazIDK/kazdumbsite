@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Clicker | Kaz’s Dumb Website</title>
+
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="./game.css" />
+</head>
+<body>
+
+  <div class="bg">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+  </div>
+
+  <div class="wrapper">
+    <header class="topbar">
+      <div class="brand">
+        <span class="badge">game</span>
+        <h1>Kaz’s Dumb Website</h1>
+      </div>
+
+      <nav class="nav">
+        <a href="/">Home</a>
+        <a href="/socials/">Socials</a>
+        <a href="/games/">Games</a>
+        <a href="/friends/">Friends</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h2>Clicker</h2>
+      <p>Cookie clicker vibes. Buy buildings. Buy upgrades. Become rich.</p>
+    </section>
+
+    <section class="clickerLayout">
+      <!-- LEFT -->
+      <div class="leftCol">
+        <div class="statRow">
+          <div class="statCard">
+            <div class="statLabel">Coins</div>
+            <div class="statValue" id="coins">0</div>
+          </div>
+          <div class="statCard">
+            <div class="statLabel">Per Click</div>
+            <div class="statValue" id="perClick">1</div>
+          </div>
+          <div class="statCard">
+            <div class="statLabel">Per Second</div>
+            <div class="statValue" id="perSec">0</div>
+          </div>
+        </div>
+
+        <button class="bigClick" id="bigClickBtn" aria-label="Click">
+          <div class="bigEmoji">🍪</div>
+          <div class="bigText">CLICK</div>
+          <div class="bigSub">tap / click</div>
+        </button>
+
+        <div class="miniControls">
+          <button class="pill" id="resetBtn">Reset</button>
+          <a class="pill" href="/games/">Back</a>
+        </div>
+
+        <div class="log" id="log"></div>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="rightCol">
+        <div class="tabs">
+          <button class="tab active" data-tab="buildings">Buildings</button>
+          <button class="tab" data-tab="upgrades">Upgrades</button>
+          <button class="tab" data-tab="stats">Stats</button>
+        </div>
+
+        <div class="panel open" id="panel-buildings">
+          <div class="panelBody" id="buildingsList"></div>
+        </div>
+
+        <div class="panel" id="panel-upgrades">
+          <div class="panelBody" id="upgradesList"></div>
+        </div>
+
+        <div class="panel" id="panel-stats">
+          <div class="panelBody">
+            <div class="item">
+              <div class="left">
+                <div class="name">Lifetime Coins</div>
+                <div class="desc" id="lifetime">0</div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="left">
+                <div class="name">Buildings Owned</div>
+                <div class="desc" id="ownedTotal">0</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">/games/clicker ✅</div>
+  </div>
+
+  <script src="/js/main.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>
